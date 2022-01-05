@@ -50,8 +50,8 @@ def parse_files(files):
 			for z in bad_func:
 				if z in y:
 					lst.append(
-						"\033[36;1m{}\033[0m -- line {}: {}".format(z.replace("(", ""),
-						"\033[33;1m{}\033[0m".format(lines.index(y) + 1),
+						"[+] {} -- line {}: {}".format(z.replace("(", ""),
+						"{}".format(lines.index(y) + 1),
 						z + y.split(z)[1]).rstrip())
 	
 	for key, value in findings.items():
@@ -68,7 +68,7 @@ def parse_files(files):
 
 def present_findings(final_findings):
 	for key, value in final_findings.items():
-		print("> \033[35;1m{}\033[0m".format(key))
+		print("[>] {}".format(key))
 		for x in value:
 			if args.verbose:
 				print("   {}".format(x))
