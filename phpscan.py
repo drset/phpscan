@@ -23,7 +23,7 @@ search_dir = args.directory
 
 ### scary php functions ###
 bad_func = ["system(", "shell_exec(", "exec(", "passthru(", "popen(",
-	"proc_open(", "pcntl_exec(", "eval(", "assert(", "copy(", "move_uploaded_file("]
+	"proc_open(", "pcntl_exec(", "eval(", "assert(", "copy(", "move_uploaded_file(", "SELECT"]
 ###########################
 
 
