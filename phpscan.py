@@ -42,6 +42,8 @@ def parse_files(files):
 	findings = {}
 	final_findings = {}
 	for x in files:
+		if (not os.path.isfile(x)):
+			continue
 		file = open(x, 'r', errors='replace')
 		lst = []
 		findings["{}".format(file.name)] = lst
